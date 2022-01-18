@@ -91,3 +91,6 @@ p#links > a:hover{
    
    color: rgba(241, 219, 204, 0.863);
 }
+figcaption{
+	font-style: italic;
+}
