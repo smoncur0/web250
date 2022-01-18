@@ -2,7 +2,7 @@
 
 html {
    font-size: 100%;
-   font-family:  verdana, sans-serif;
+   font-family: Verdana, sans-serif;
    background-color: rgba(100, 228, 15, 0.226);
    font-size: 20px;
    margin: 25px;
@@ -46,7 +46,7 @@ header > nav > ul > li > a {
 
 }
 header > nav > ul > li > a:hover{
-   background-color: rgba(196, 102, 58, 0.336);
+   color: rgba(196, 102, 58, 0.336);
 }
 p.first{
    font-size: 20px;
@@ -67,7 +67,7 @@ text-decoration: none;
 }
 
 p > a{
-font-family: Calibri; 
+font-family: Verdana, sans-serif;
 color: rgba(97, 167, 32, 0.945); 
 text-decoration: none;
 
@@ -75,7 +75,7 @@ text-decoration: none;
 
 
 ul > li > a{
-   font-family: Calibri; 
+   font-family: Verdana, sans-serif;
    color: rgba(20, 80, 28, 0.945);  
 }
 ul > li > a:hover{
@@ -89,5 +89,5 @@ p#links{
 }
 p#links > a:hover{
    
-   background-color: rgba(241, 219, 204, 0.863);
+   color: rgba(241, 219, 204, 0.863);
 }
