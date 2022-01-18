@@ -80,7 +80,7 @@ ul > li > a{
 }
 ul > li > a:hover{
    
-   background-color: rgba(196, 102, 58, 0.336);  
+   color: rgba(196, 102, 58, 0.336);  
 }
 
 p#links{
