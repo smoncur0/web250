@@ -10,8 +10,7 @@
 <h1>Sam's Used Cars</h1>
 <h3>Complete Inventory</h3>
 <?php include 'db.php';
-$vin = $_GET['VIN'];
-$query = "SELECT * FROM INVENTORY WHERE VIN='$vin'";
+$query = "SELECT * FROM inventory ORDER BY Make";
 /* Try to query the database */
 if ($result = $mysqli->query($query)) {
    // Don't do anything if successful.
