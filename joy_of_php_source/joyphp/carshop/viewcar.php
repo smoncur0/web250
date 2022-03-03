@@ -30,6 +30,7 @@ while ($result_ar = mysqli_fetch_assoc($result)) {
     $price = $result_ar['ASKING_PRICE'];
 }
 echo "$year $make $model </p>";
+echo "<img src='images/$image'>";
 echo "<p>Asking Price: $price </p>";
 echo "<p>Exterior Color: $color </p>";
 echo "<p>Interior Color: $interior </p>";
