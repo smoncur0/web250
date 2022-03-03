@@ -6,46 +6,61 @@
 
    
 <body>
+    
 <h1>Sam's Used Cars</h1>
 <h3>Complete Inventory</h3>
- <?php
-include 'db.php';
-$query = "SELECT * FROM inventory ORDER BY Make";
-/* Try to insert the new car into the database */
+<?php include 'db.php';
+$vin = $_GET['VIN'];
+$query = "SELECT * FROM INVENTORY WHERE VIN='$vin'";
+/* Try to query the database */
 if ($result = $mysqli->query($query)) {
    // Don't do anything if successful.
 }
 else
 {
-    echo "Error getting cars from the database: " . mysql_error()."<br>";
+    echo "Sorry, a vehicle with VIN of $vin cannot be found " . mysql_error()."<br>";
 }
-
-//***
-echo "<table id='Grid' style='width: 80%'><tr>";
-echo "<th style='width: 50px'>Make</th>";
-echo "<th style='width: 50px'>Model</th>";
-echo "<th style='width: 50px'>Asking Price</th>";
-echo "</tr>\n";
-
-$class ="odd";
-
+// Loop through all the rows returned by the query, creating a table row for each
 while ($result_ar = mysqli_fetch_assoc($result)) {
-    echo "<tr class=\"$class\">";
-    echo "<td>" . $result_ar['Make'] . "</td>";
-    echo "<td>" . $result_ar['Model'] . "</td>";
-    echo "<td>" . $result_ar['ASKING_PRICE'] . "</td>";
-   echo "</td></tr>\n";
-    if ($class=="odd"){
-        $class="even";
-    }
-    else
-    {
-        $class="odd";
-    }
+    $year = $result_ar['YEAR'];
+	$make = $result_ar['Make'];
+    $model = $result_ar['Model'];
+    $trim = $result_ar['TRIM'];
+    $color = $result_ar['EXT_COLOR'];
+    $interior = $result_ar['INT_COLOR'];
+    $mileage = $result_ar['MILEAGE']; 
+    $transmission = $result_ar['TRANSMISSION']; 
+    $price = $result_ar['ASKING_PRICE'];
+	$image = $result_ar['PRIMARY_IMAGE'];
 }
-echo "</table>";
+echo "<p>$color $year $make $model <br>VIN: $vin</p>";
+echo "<p>Asking Price: $".number_format($price,0) ."</p>";
+echo "<IMG src= 'images/$image'>";
+   
+?>
+
+<br/><br/>
+<form action="upload_file.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input name="VIN" type="hidden" value= "<?php echo "$vin" ?>" />
+<input type="submit" name="submit" value="Submit">
+</form>
+<br/><br/>
+
+<?php
+$query = "SELECT * FROM images WHERE VIN='$vin'";
+/* Try to query the database */
+if ($result = $mysqli->query($query)) {
+   // Got some results
+   // Loop through all the rows returned by the query, creating a table row for each
+while ($result_ar = mysqli_fetch_assoc($result)) {
+    $image = $result_ar['ImageFile'];
+    echo "<img src='images/$image'>  " ;
+}
+}
 $mysqli->close();
 ?>
- </body>
+</body>
  
 </html>
