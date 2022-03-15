@@ -44,12 +44,12 @@ html {
 }
 
 p#tagline{
-     text-align: center;
-    font-size: 1.2em;
-    line-height: 1.5em;
-    color: rgba(32, 118, 158, 0.945);
-    font-style: italic;	
-	 text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    color: rgba(13, 37, 17, 0.651);
+    font-style: italic;
+    text-decoration: none;
+	
 }
 header > nav > ul > li > a {
    background-color: rgba(243, 115, 30, 0.301);
