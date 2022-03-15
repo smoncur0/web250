@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+html {
+   font-size: 100%;
+   font-family: Verdana, sans-serif;
+   background-color: rgba(100, 228, 15, 0.226);
+   font-size: 20px;
+   margin: 25px;
+ 
+}
+
+ body { 
+	margin: 40px;
+	font-size: 20px;
+	line-height: 1.5em;
+	color: rgba(49, 54, 49, 0.945);
+}
+
+ h1 {
+	text-align: center;      
+   	color: #28552dc5;
+	
+}
+ h2 {
+    text-align: center;
+    font-size: 25px;
+    color: rgba(25, 77, 27, 0.651);
+    
+}
+ h3 {
+    text-align: center;
+    font-size: 25px;
+    color: rgba(13, 37, 17, 0.651);
+    font-style: italic;
+    text-decoration: none;
+}
+ h4 {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: rgba(32, 118, 158, 0.945);
+    font-style: italic;
+}
+
+
+ footer > p#validation > a{
+ color: rgba(8, 32, 11, 0.945);  
+ 
+}
+ p#label{
+    text-align: center;
+    color: rgba(170, 114, 30, 0.897); 
+    font-style: italic;
+}
+header > nav > ul > li > a {
+   background-color: rgba(243, 115, 30, 0.301);
+   color: rgba(17, 95, 10, 0.89);
+
+}
+header > nav > ul > li > a:hover{
+   color: rgba(196, 102, 58, 0.336);
+}
+p.first{
+   font-size: 20px;
+   text-align: center;
+}
+p {
+  font-size: 20px;
+}
+ footer {
+    text-align: center;
+    color: rgba(78, 104, 18, 0.767);
+ 
+}
+
+a{
+text-decoration: none;
+
+}
+
+p > a{
+font-family: Verdana, sans-serif;
+color: rgba(97, 167, 32, 0.945); 
+text-decoration: none;
+
+}
+
+
+ul > li > a{
+   font-family: Verdana, sans-serif;
+   color: rgba(20, 80, 28, 0.945);  
+}
+ul > li > a:hover{
+   
+   color: rgba(196, 102, 58, 0.336);  
+}
+
+p#links{
+	text-align: center;
+	background-color: rgba(202, 143, 75, 0.322);
+}
+p#links > a:hover{
+   
+   color: rgba(241, 219, 204, 0.863);
+}
+figcaption{
+	font-style: italic;
+}
+
+
+
+
