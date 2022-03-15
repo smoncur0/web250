@@ -49,6 +49,7 @@ p#tagline{
     line-height: 1.5em;
     color: rgba(32, 118, 158, 0.945);
     font-style: italic;	
+	 text-decoration: none;
 }
 header > nav > ul > li > a {
    background-color: rgba(243, 115, 30, 0.301);
