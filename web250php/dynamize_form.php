@@ -1,5 +1,5 @@
 <style>
-
+        
 .entry > img{
 
 
@@ -72,3 +72,4 @@ figcaption{
 
 
  ?>
+
